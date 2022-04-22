@@ -1,0 +1,84 @@
+/**
+* This is the main stylesheet for the sass compiler, all imports should stem from this initial page.
+* It contains the universal styles of the site, the imports and various other items.
+*/
+// Colours and settings
+$siteWidth: 1280px;
+
+// Imports
+// @import '_menu.scss';
+// @import '_home.scss';
+
+html,
+html * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// These are used to ensure the app runs full display
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+// Main body content
+
+.product-card-main {
+  display: flex;
+  flex-wrap: wrap !important;
+}
+
+.product-card {
+  width: 300px;
+  height: 500px;
+  border: 0px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  color: #000;
+  text-align: center;
+  border: 0px solid white;
+  background-color: #d9d9de;
+  border-radius: 8px;
+}
+.product-img {
+  width: 250px;
+  height: 350px;
+  object-fit: contain;
+  border: 0px solid white;
+  border-radius: 2px;
+  background-color: #d9d9de;
+}
+.products-top {
+  padding-bottom: 450px;
+}
+
+.search-bar {
+  width: 313px;
+  height: 40px;
+  border: 0px solid white;
+  border-radius: 5px;
+  padding: 7px;
+  margin-left: -8%;
+}
+
+.text-center {
+  text-align: center;
+  color: #fff;
+}
+
+.close {
+  margin-left: -29px;
+  position: absolute;
+  color: #000;
+  margin-top: 8px;
+}
+.search {
+  margin-top: 10px;
+  position: absolute;
+  margin-left: 10px;
+}
+
+@import "_menu.scss";
+@import "_home.scss";

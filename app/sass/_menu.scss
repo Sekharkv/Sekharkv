@@ -1,0 +1,101 @@
+/**
+ * The menu is technically the header of the site, it contains the styles for the drop down of the Search Bar.
+ *
+ */
+
+$lineHeightForNav: 70px;
+$lineHeightForSearch: 50px;
+
+.menu {
+  color: white;
+  width: 100%;
+  z-index: 200;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #020229;
+  padding: 5px 0;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu h1 {
+  padding: 5px 30px;
+  flex: 1;
+}
+.menu ul {
+  flex: 9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu ul li {
+  color: white;
+  list-style: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+  transition: 0.7s ease;
+}
+.menu ul li a {
+  text-decoration: none;
+}
+
+.menu ul li:hover {
+  color: antiquewhite;
+  font-size: 17px;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .menu ul {
+    flex-direction: column;
+  }
+  .menu ul li {
+    padding: 10px 0;
+  }
+  .hamburger {
+    display: block;
+    padding: 2rem 3rem;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .menu {
+    position: fixed;
+    height: 20px;
+  }
+  .navCon {
+    flex-direction: column-reverse;
+    position: absolute;
+    right: -3000%;
+    top: 70px;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .navCon.active {
+    right: 17%;
+  }
+  .menu.active {
+    height: 450px;
+    flex-direction: column;
+  }
+}

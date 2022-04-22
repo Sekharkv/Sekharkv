@@ -1,0 +1,52 @@
+/** This is the main stylesheet for the sass compiler, all imports should stem from this initial page. It contains the universal styles of the site, the imports and various other items. */
+html, html * { -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; margin: 0; }
+
+html, body { width: 100%; height: 100%; }
+
+.product-card-main { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap !important; flex-wrap: wrap !important; }
+
+.product-card { width: 300px; height: 500px; border: 0px solid #ccc; padding: 10px; margin: 10px; color: #000; text-align: center; border: 0px solid white; background-color: #d9d9de; border-radius: 8px; }
+
+.product-img { width: 250px; height: 350px; -o-object-fit: contain; object-fit: contain; border: 0px solid white; border-radius: 2px; background-color: #d9d9de; }
+
+.products-top { padding-bottom: 450px; }
+
+.search-bar { width: 313px; height: 40px; border: 0px solid white; border-radius: 5px; padding: 7px; margin-left: -8%; }
+
+.text-center { text-align: center; color: #fff; }
+
+.close { margin-left: -29px; position: absolute; color: #000; margin-top: 8px; }
+
+.search { margin-top: 10px; position: absolute; margin-left: 10px; }
+
+/** The menu is technically the header of the site, it contains the styles for the drop down of the Search Bar. */
+.menu { color: white; width: 100%; z-index: 200; font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif; background-color: #020229; padding: 5px 0; min-height: 80px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.menu h1 { padding: 5px 30px; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+
+.menu ul { -webkit-box-flex: 9; -ms-flex: 9; flex: 9; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.menu ul li { color: white; list-style: none; cursor: pointer; font-size: 15px; font-weight: 400; -webkit-transition: 0.7s ease; transition: 0.7s ease; }
+
+.menu ul li a { text-decoration: none; }
+
+.menu ul li:hover { color: antiquewhite; font-size: 17px; }
+
+.hamburger { display: none; cursor: pointer; }
+
+.bar { display: block; width: 25px; height: 3px; margin: 5px auto; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; background-color: white; }
+
+@media screen and (max-width: 768px) { .menu ul { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+  .menu ul li { padding: 10px 0; }
+  .hamburger { display: block; padding: 2rem 3rem; }
+  .hamburger.active .bar:nth-child(2) { opacity: 0; }
+  .hamburger.active .bar:nth-child(1) { -webkit-transform: translateY(8px) rotate(45deg); transform: translateY(8px) rotate(45deg); }
+  .hamburger.active .bar:nth-child(3) { -webkit-transform: translateY(-8px) rotate(-45deg); transform: translateY(-8px) rotate(-45deg); }
+  .menu { position: fixed; height: 20px; }
+  .navCon { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; position: absolute; right: -3000%; top: 70px; text-align: center; -webkit-transition: 0.3s; transition: 0.3s; }
+  .navCon.active { right: 17%; }
+  .menu.active { height: 450px; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; } }
+
+section#home { width: 100%; height: 100%; padding: 50px 20px 0; background-image: url("/img/header.jpg"); background-size: cover; background-repeat: no-repeat; opacity: 1; -o-object-fit: contain; object-fit: contain; background-attachment: fixed; }
+
+/*# sourceMappingURL=main.css.map */
